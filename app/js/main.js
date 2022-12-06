@@ -49,6 +49,11 @@ const newsSlider = new Swiper(".news__slider", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
   // effect: "fade",
   // loop: "infinite",
 });
