@@ -3,9 +3,10 @@
 }
 html,
 body {
-  transition: .3s;
-  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
   color: #ffffff;
+  background: #001B28;
 }
 h2 {
   font-weight: 400;
@@ -41,54 +42,88 @@ h2 {
   opacity: 1;
 }
 
+//modals
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+.modal {
+  display: none;
+}
+
+.modal-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  background: rgba(10, 33, 45, 0.96);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.modal--visible {
+  display: block;
+}
 
 //title-animation
-h2{
-  transform: translateY(-50px);
-  opacity: 0;
-}
-.peculiar__title{
-  transform: translateY(0);
-  opacity: 1;
-}
+// h2 {
+//   transform: translateY(-50px);
+//   opacity: 0;
+// }
+// .peculiar__title {
+//   transform: translateY(0);
+//   opacity: 1;
+// }
 
-._anim-items {
-  &._active {
-    h1,
-    h2 {
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-      transform: translateY(-50px);
-      opacity: 0;
-      animation-name: titleAnimation;
-      animation-timing-function: ease;
-      animation-duration: 3s;
-      animation-delay: 0.1s;
-      -webkit-animation-fill-mode: forwards;
-    }
-    @keyframes titleAnimation {
-      0% {
-        transform: translateY(-50px);
-        opacity: 0;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-      }
-      20% {
-        transform: translateY(0);
-        opacity: 1;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
-      }
-      80% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
-      }
-    }
-  }
-}
+// ._anim-items {
+//   &._active {
+//     h1,
+//     h2 {
+//       -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+//       clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+//       transform: translateY(-50px);
+//       opacity: 0;
+//       animation-name: titleAnimation;
+//       animation-timing-function: ease;
+//       animation-duration: 3s;
+//       animation-delay: 0.1s;
+//       -webkit-animation-fill-mode: forwards;
+//     }
+//     @keyframes titleAnimation {
+//       0% {
+//         transform: translateY(-50px);
+//         opacity: 0;
+//         -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+//         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+//       }
+//       20% {
+//         transform: translateY(0);
+//         opacity: 1;
+//         -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
+//         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
+//       }
+//       80% {
+//         transform: translateY(0);
+//         opacity: 1;
+//       }
+//       100% {
+//         transform: translateY(0);
+//         opacity: 1;
+//         -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
+//         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
+//       }
+//     }
+//   }
+// }

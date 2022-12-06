@@ -12,6 +12,48 @@
 </head>
 
 <body>
+  <div class="modal-overlay">
+    <div class="popup modal" data-target="join-form-popup">
+      <form action="" class="join-form">
+        <span class="join-form__title">Регистрация</span>
+        <input type="text" class="join-form__input" placeholder="Ваше имя">
+        <input type="email" class="join-form__input" placeholder="E-mail">
+        <input type="password" class="join-form__input" placeholder="Введите пароль">
+        <input type="password" class="join-form__input" placeholder="Повторите пароль">
+        <button type="submit" class="join-form__btn"><span>Зарегистрироваться</span></button>
+        <p class="agreement">
+          Регестрируясь вы принимаете соглашение на отправку оповещаний на вашу почту
+        </p>
+        <div class="modal__close-btn close">
+          <img class="close" src="img/svg/form/close.svg" alt="">
+        </div>
+      </form>
+    </div>
+    <div class="popup modal" data-target="login-popup">
+      <form action="" class="login-form">
+        <span class="login-form__title">Вход</span>
+        <input type="email" class="login-form__input" placeholder="E-mail">
+        <input type="password" class="login-form__input" placeholder="Введите пароль">
+        <button type="submit" class="login-form__btn"><span>Войти</span></button>
+        <div class="modal__close-btn close">
+          <img class="close" src="img/svg/form/close.svg" alt="">
+        </div>
+      </form>
+    </div>
+    <div class="popup modal" data-target="registration-popup">
+      <form action="" class="registration-form">
+        <span class="registration-form__title">Вступить в <br>ассоциацию</span>
+        <input type="text" class="registration-form__input" placeholder="Наименование организации">
+        <input type="text" class="registration-form__input" placeholder="ФИО">
+        <input type="tel" class="registration-form__input" placeholder="Номер телефона">
+        <input type="email" class="registration-form__input" placeholder="E-mail">
+        <button type="submit" class="registration-form__btn"><span>Отправить заявку</span></button>
+        <div class="modal__close-btn close">
+          <img class="close" src="img/svg/form/close.svg" alt="">
+        </div>
+      </form>
+    </div>
+  </div>
   <header class="header">
     <img class="header__bg" src="img/header/header-bg.jpg" alt="">
     <div class="header__top">
@@ -33,8 +75,8 @@
         </nav>
         <div class="login-block">
           <div class="btn-wrapper">
-            <button class="registration-btn">Регистрация</button>
-            <button class="login-btn">Вход</button>
+            <button class="registration-btn modal-btn" data-path="registration-popup">Регистрация</button>
+            <button class="login-btn modal-btn" data-path="login-popup">Вход</button>
           </div>
         </div>
       </div>
@@ -48,7 +90,7 @@
               Изначально созданная на базе предприятий, вошедших впоследствии в первоначальный состав интегрированной структуры, «Моринформсистема» включает в себя как десять предприятий, входящих в интегрированную структуру, так и десять предприятий, не входящих в нее, но объединившихся для достижения общих целей.
             </p>
           </div>
-          <button class="join-btn">Вступить в<br> ассоциацию</button>
+          <button class="join-btn modal-btn" data-path="join-form-popup">Вступить в<br> ассоциацию</button>
           <div class="leaders">
             <p class="leaders__title">Наши руководители</p>
             <div class="leaders__inner">
@@ -123,6 +165,14 @@
       </div>
     </div>
   </header>
+  <section class="works">
+    <div class="container">
+      <h2 class="works__title">Как мы работаем</h2>
+      <div class="works__benefits benefits">
+
+      </div>
+    </div>
+  </section>
   <script src="js/main.min.js"></script>
 </body>
 

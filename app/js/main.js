@@ -279,39 +279,42 @@ const newsSlider = new Swiper(".news__slider", {
 // }
 // headerSearch();
 
-// function popupForm() {
-//   const btns = document.querySelectorAll(".modal-btn");
-//   const modalOverlay = document.querySelector(".modal-overlay ");
-//   const modals = document.querySelectorAll(".modal");
-//   const modalCloseBtn = document.querySelector(".modal__close-btn");
+function popupForm() {
+  const btns = document.querySelectorAll(".modal-btn");
+  const modalOverlay = document.querySelector(".modal-overlay ");
+  const modals = document.querySelectorAll(".modal");
+  const modalCloseBtn = document.querySelector(".modal__close-btn");
+  const close = document.querySelectorAll(".close");
 
-//   btns.forEach((el) => {
-//     el.addEventListener("click", (e) => {
-//       let path = e.currentTarget.getAttribute("data-path");
+  btns.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      let path = e.currentTarget.getAttribute("data-path");
 
-//       modals.forEach((el) => {
-//         el.classList.remove("modal--visible");
-//       });
+      modals.forEach((el) => {
+        el.classList.remove("modal--visible");
+      });
 
-//       document
-//         .querySelector(`[data-target="${path}"]`)
-//         .classList.add("modal--visible");
-//       modalOverlay.classList.add("modal-overlay--visible");
-//     });
-//   });
+      document
+        .querySelector(`[data-target="${path}"]`)
+        .classList.add("modal--visible");
+      modalOverlay.classList.add("modal-overlay--visible");
+    });
+  });
 
-//   modalOverlay.addEventListener("click", (e) => {
-//     console.log(e.target);
+  modalOverlay.addEventListener("click", (e) => {
+    console.log(e.target);
 
-//     if (e.target == modalOverlay || e.target == modalCloseBtn) {
-//       modalOverlay.classList.remove("modal-overlay--visible");
-//       modals.forEach((el) => {
-//         el.classList.remove("modal--visible");
-//       });
-//     }
-//   });
-// }
-// popupForm();
+    close.forEach((elem) => {
+      if (e.target == modalOverlay || e.target == elem) {
+        modalOverlay.classList.remove("modal-overlay--visible");
+        modals.forEach((el) => {
+          el.classList.remove("modal--visible");
+        });
+      }
+    })
+  });
+}
+popupForm();
 
 // function cardSliderPopup() {
 //   const btns = document.querySelectorAll(".card__more-btn");

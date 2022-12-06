@@ -1,0 +1,11 @@
+.works{
+  position: relative;
+  .container{
+    position: relative;
+  }
+  &__title{
+    color: #000;
+    position: relative;
+    z-index: 12000;
+  }
+}
