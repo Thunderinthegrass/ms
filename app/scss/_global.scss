@@ -35,11 +35,14 @@ h2 {
   flex: 0 0 auto;
 }
 .d-none {
-  display: none;
+  display: none!important;
 }
 .d-block {
   display: block;
   opacity: 1;
+}
+.d-flex{
+  display: flex;
 }
 
 //modals
