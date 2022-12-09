@@ -86,8 +86,8 @@ moreBtn();
 
 // function tabs() {
 
-//   let tabItem = document.querySelectorAll('.tabs__item');
-//   let tabNavItem = document.querySelectorAll('.tabs-navigation__item');
+//   let tabItem = document.querySelectorAll('.map__info');
+//   let tabNavItem = document.querySelectorAll('.map__dot');
 
 //   function tab(tabItem, tabNavItem) {
 //     tabNavItem.forEach((elem, index) => {
