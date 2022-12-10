@@ -63,3 +63,16 @@
     }
   }
 }
+.works.media{
+  @media (max-width: 975px){
+    padding-top: 64px;
+    .works__title{
+      transform: translateY(0);
+    }
+    .works__top-gradient{
+      background: #001B28;
+      height: 805px;
+      top: -805px;
+    }
+  }
+}

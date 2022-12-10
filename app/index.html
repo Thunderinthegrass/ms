@@ -13,8 +13,8 @@
 
 <body>
   <div class="modal-overlay">
-    <div class="popup modal" data-target="join-form-popup">
-      <form action="" class="join-form">
+    <div class="popup modal" data-target="registration-popup">
+      <form action="" class="join-form media">
         <span class="join-form__title">Регистрация</span>
         <input type="text" class="join-form__input" placeholder="Ваше имя">
         <input type="email" class="join-form__input" placeholder="E-mail">
@@ -30,7 +30,7 @@
       </form>
     </div>
     <div class="popup modal" data-target="login-popup">
-      <form action="" class="login-form">
+      <form action="" class="login-form media">
         <span class="login-form__title">Вход</span>
         <input type="email" class="login-form__input" placeholder="E-mail">
         <input type="password" class="login-form__input" placeholder="Введите пароль">
@@ -40,8 +40,8 @@
         </div>
       </form>
     </div>
-    <div class="popup modal" data-target="registration-popup">
-      <form action="" class="registration-form">
+    <div class="popup modal" data-target="join-form-popup">
+      <form action="" class="registration-form media">
         <span class="registration-form__title">Вступить в <br>ассоциацию</span>
         <input type="text" class="registration-form__input" placeholder="Наименование организации">
         <input type="text" class="registration-form__input" placeholder="ФИО">
@@ -61,10 +61,21 @@
     </div>
     <div class="header__top">
       <div class="container">
+        <div class="mobile-btn-wrapper">
+          <button class="nav-mobile-btn mobile-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
         <div class="header__logo">
           <img src="img/svg/header/top/logo.svg" alt="">
         </div>
-        <nav class="header__nav">
+        <nav class="header__nav header__nav-mobile">
+          <div class="close-menu-btn"></div>
+          <div class="header__nav-logo">
+            <img src="img/svg/header/top/logo.svg" alt="">
+          </div>
           <ul class="header__nav-list">
             <li class="header__nav-item"><a href="#" class="header__nav-link current-link">Главная</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">О нас</a></li>
@@ -167,8 +178,11 @@
         </div>
       </div>
     </div>
+    <div class="header__bottom-gradient">
+      
+    </div>
   </header>
-  <!-- <section class="works">
+  <section class="works media">
     <div class="works__top-gradient">
 
     </div>
@@ -214,7 +228,7 @@
       </div>
     </div>
   </section>
-  <div class="about">
+  <!-- <div class="about">
     <div class="container">
       <div class="about__top">
         <div class="about__descr">
