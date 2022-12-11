@@ -26,6 +26,8 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
+    flex-basis: auto;
   }
   &__item {
     width: 240px;

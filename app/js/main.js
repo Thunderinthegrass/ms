@@ -82,26 +82,26 @@ function popupForm() {
 }
 popupForm();
 
-// function moreBtn() {
-//   let btn = document.querySelector('.members__more-btn');
-//   let membersInnerMore = document.querySelector('.members__inner_more');
-//   let span = btn.querySelector('span')
+function moreBtn() {
+  let btn = document.querySelector('.members__more-btn');
+  let membersInnerMore = document.querySelector('.members__inner_more');
+  let span = btn.querySelector('span')
 
-//   btn.addEventListener('click', () => {
-//     membersInnerMore.classList.toggle('d-none');
-//     membersInnerMore.classList.toggle('d-flex');
-//     span.classList.toggle('after-rotate');
+  btn.addEventListener('click', () => {
+    membersInnerMore.classList.toggle('d-none');
+    membersInnerMore.classList.toggle('d-flex');
+    span.classList.toggle('after-rotate');
 
-//     if (membersInnerMore.classList.contains('d-flex')) {
-//       span.innerHTML = 'Скрыть';
-//     }
-//     else {
-//       span.innerHTML = 'Больше';
-//     }
-//   })
+    if (membersInnerMore.classList.contains('d-flex')) {
+      span.innerHTML = 'Скрыть';
+    }
+    else {
+      span.innerHTML = 'Больше';
+    }
+  })
 
-// }
-// moreBtn();
+}
+moreBtn();
 
 // function tabs() {
 
