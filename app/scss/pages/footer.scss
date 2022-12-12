@@ -1,13 +1,14 @@
 .footer {
   position: relative;
   background: #001b28;
-  padding-bottom: 210px;
+  // padding-bottom: 210px;
   overflow: hidden;
   .container {
     display: flex;
     justify-content: space-between;
     position: relative;
     z-index: 2;
+    padding-bottom: 210px;
   }
   .contacts {
     margin-top: 386px;
@@ -184,6 +185,9 @@
         width: 20px;
         height: 20px;
         background-image: url(../img/footer/close.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         cursor: pointer;
       }
       .more-info-link {
@@ -221,5 +225,95 @@
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+.footer.media {
+  @media (max-width: 1400px) {
+    .container {
+      overflow-x: hidden;
+    }
+    .footer__map {
+      width: 1050px;
+      flex-shrink: 0;
+    }
+  }
+  @media (max-width: 1150px) {
+    .map__info {
+      right: auto;
+      left: 384px;
+    }
+  }
+  @media (max-width: 975px) {
+    padding-top: 100px;
+    .contacts {
+      margin-top: 0;
+      position: absolute;
+      top: 35px;
+    }
+  }
+  @media (max-width: 775px) {
+    .map__info {
+      width: 250px;
+      height: 310px;
+      &-img {
+        height: 107px;
+        margin-bottom: 13px;
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+      .more-info-link {
+        width: 30px;
+        height: 8px;
+        right: 15px;
+        bottom: 18px;
+      }
+      .close-info-btn {
+        width: 14px;
+        height: 14px;
+        right: 14px;
+        top: 14px;
+      }
+      &-spb {
+        top: 405px;
+        left: 84px;
+      }
+      &-arh {
+        top: 419px;
+        left: 120px;
+      }
+      &-msk {
+        top: 484px;
+        left: 73px;
+      }
+      &-klg {
+        top: 483px;
+        left: 43px;
+      }
+      &-rzn {
+        top: 514px;
+        left: 74px;
+      }
+      &-sar {
+        top: 584px;
+        left: 93px;
+      }
+      &-uln {
+        top: 561px;
+        left: 112px;
+      }
+    }
+  }
+  @media (max-width: 606px) {
+    .contacts__title {
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 26px;
+      margin-bottom: 60px;
+    }
   }
 }
