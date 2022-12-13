@@ -139,6 +139,7 @@
   &__logo {
     position: relative;
     margin-top: 26px;
+    z-index: 199;
   }
   &__nav {
     position: relative;
@@ -500,7 +501,7 @@
       flex-direction: column;
       align-items: flex-start;
       padding-top: 20px;
-      z-index: 20;
+      z-index: 200;
       &-list {
         flex-direction: column;
         align-items: start;

@@ -37,8 +37,18 @@
     height: 345px;
     opacity: 0.6;
     transition: 0.3s;
+    position: relative;
+    &.translateY{
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1) translateY(-60%);
+        z-index: 1;
+      }
+    }
     &:hover {
       opacity: 1;
+      transform: scale(1.1);
+      z-index: 1;
     }
     img {
       object-fit: cover;
@@ -156,7 +166,18 @@
   }
 }
 .gallery.media.gallery__page{
+  padding-top: 120px;
+  .gallery__title{
+    @media (max-width: 606px){
+      text-align: center;
+      &::after{
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
   @media (max-width: 800px){
+    padding-top: 30px;
     .gallery__inner_first{
       flex-direction: column;
       .gallery__column-row:nth-child(2){
