@@ -75,12 +75,21 @@
           <ul class="header__nav-list">
             <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
             <li class="header__nav-item"><a href="about.html" class="header__nav-link">О нас</a></li>
-            <li class="header__nav-item"><a href="gallery.html" class="header__nav-link current-link">Фотогалерея</a></li>
+            <li class="header__nav-item"><a href="gallery.html" class="header__nav-link">Фотогалерея</a></li>
             <li class="header__nav-item"><a href="#footer" class="header__nav-link">Контакты</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Новости</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link current-link">Новости</a></li>
           </ul>
         </nav>
         <div class="login-block">
+          <a href="profile.html" class="user-link d-none">
+            <span class="user-name">Дмитрий Иванов</span>
+            <div class="user-icon-wrapper">
+              <span class="badge"></span>
+              <svg class="user-icon">
+                <use xlink:href="img/sprite/sprite.svg#user"></use>
+              </svg>
+            </div>
+          </a>
           <div class="btn-wrapper">
             <button class="registration-btn modal-btn" data-path="registration-popup">Регистрация</button>
             <button class="login-btn modal-btn" data-path="login-popup">Вход</button>

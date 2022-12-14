@@ -1,0 +1,45 @@
+.docs {
+  padding-top: 71px;
+  @media (max-width: 744px) {
+    padding-top: 30px;
+  }
+  &__title {
+    margin-bottom: 70px;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    @media (max-width: 744px) {
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 32px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  }
+  &__list {
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__item {
+    padding: 25px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    justify-content: space-between;
+    &:first-child{
+      border-top: 1px solid #ffffff;
+    }
+  }
+  .download-btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
