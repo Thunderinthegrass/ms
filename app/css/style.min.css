@@ -231,6 +231,7 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  display: none;
 }
 .top-line .registration-btn {
   font-weight: 500;
@@ -326,6 +327,50 @@ a {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+.top-line .user-link {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.top-line .user-link .user-name {
+  display: inline-block;
+  padding: 18px 24px;
+  background: #4c5f68;
+  border-radius: 20px 0 0 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+.top-line .user-link .user-icon-wrapper {
+  width: 54px;
+  height: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0 20px 20px 0;
+  background: #001b28;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+}
+.top-line .user-link .user-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .header {
@@ -712,9 +757,9 @@ a {
   height: 427px;
   left: 0;
   bottom: 805px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 33, 48, 0)), color-stop(83.85%, #001B28));
-  background: -o-linear-gradient(top, rgba(1, 33, 48, 0) 0%, #001B28 83.85%);
-  background: linear-gradient(180deg, rgba(1, 33, 48, 0) 0%, #001B28 83.85%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 33, 48, 0)), color-stop(83.85%, #001b28));
+  background: -o-linear-gradient(top, rgba(1, 33, 48, 0) 0%, #001b28 83.85%);
+  background: linear-gradient(180deg, rgba(1, 33, 48, 0) 0%, #001b28 83.85%);
   display: none;
 }
 
@@ -2073,9 +2118,6 @@ a {
 }
 .gallery__img:hover {
   opacity: 1;
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
   z-index: 1;
 }
 .gallery__img img {
@@ -2746,6 +2788,12 @@ a {
   width: 100%;
   padding: 30px 40px 0;
   margin: 0 auto;
+  display: none;
+}
+@media (max-width: 744px) {
+  .news-blog .news {
+    display: block;
+  }
 }
 @media (max-width: 430px) {
   .news-blog .news {

@@ -1,9 +1,9 @@
-.top-line{
+.top-line {
   position: sticky;
   top: 0;
   left: 0;
   z-index: 300;
-  &-about{
+  &-about {
     background: #001b28;
   }
   .login-block {
@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
+    display: none;
   }
   .registration-btn {
     font-weight: 500;
@@ -94,6 +95,37 @@
           transition: 0.3s;
         }
       }
+    }
+  }
+  .user-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .user-name {
+      display: inline-block;
+      padding: 18px 24px;
+      background: #4c5f68;
+      border-radius: 20px 0 0 20px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+    }
+    .user-icon-wrapper {
+      width: 54px;
+      height: 53px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 20px 20px 0;
+      background: #001b28;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+    }
+    .user-icon {
+      width: 30px;
+      height: 30px;
     }
   }
 }
@@ -434,23 +466,23 @@
       }
     }
   }
-  &__bottom-gradient{
+  &__bottom-gradient {
     position: absolute;
     width: 100%;
     height: 427px;
     left: 0;
     bottom: 805px;
-    background: linear-gradient(180deg, rgba(1, 33, 48, 0) 0%, #001B28 83.85%);
+    background: linear-gradient(180deg, rgba(1, 33, 48, 0) 0%, #001b28 83.85%);
     display: none;
   }
 }
-.top-line.media{
+.top-line.media {
   @media (max-width: 1386px) {
     .header__nav-item {
       margin-left: 40px;
     }
   }
-  @media (max-width: 1286px){
+  @media (max-width: 1286px) {
     .header__logo {
       width: 300px;
     }
@@ -471,7 +503,7 @@
       display: block;
     }
   }
-  @media (max-width: 870px){
+  @media (max-width: 870px) {
     .header__top {
       height: 60px;
     }
@@ -490,7 +522,7 @@
     .header__nav {
       position: absolute;
       transform: translateX(-120%);
-      transition: .5s;
+      transition: 0.5s;
       max-width: 378px;
       width: 100%;
       height: 100vh;
@@ -587,7 +619,7 @@
         gap: 32px;
       }
     }
-    .header__bottom-gradient{
+    .header__bottom-gradient {
       display: block;
     }
     .news {
@@ -614,7 +646,7 @@
     .header__nav {
       position: absolute;
       transform: translateX(-120%);
-      transition: .5s;
+      transition: 0.5s;
       max-width: 378px;
       width: 100%;
       height: 100vh;
@@ -747,10 +779,10 @@
       height: 60px !important;
     }
     &__title {
-      font-weight: 800!important;
-      font-size: 22px!important;
-      line-height: 27px!important;
-      margin-bottom: 59px!important;
+      font-weight: 800 !important;
+      font-size: 22px !important;
+      line-height: 27px !important;
+      margin-bottom: 59px !important;
     }
   }
 }
