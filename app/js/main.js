@@ -202,12 +202,58 @@ function scrollToLink() {
 scrollToLink();
 
 
-function registrationForm() {
-  const form = document.querySelector('.registration-form');
+function joinForm() {
+  const form = document.querySelector('.join-form');
   const telSelector = form.querySelector('input[type="tel"]');
   const inputMask = new Inputmask('+7 (999) 999-99-99');
-  inputMask.mask(telSelector )
+  inputMask.mask(telSelector);
+
+  new window.JustValidate('.join-form', {
+    rules: {
+      tel: {
+        required: true,
+        function: () => {
+          const phone = telSelector.inputmask.unmaskedvalue();
+          return Number(phone) && phone.length === 10;
+        }
+      }
+    },
+    submitHandler: function(thisForm) {
+
+    }
+  })
 }
+joinForm();
+
+function loginForm() {
+  const form = document.querySelector('.registration-form');
+  const inputMask = new Inputmask('+7 (999) 999-99-99');
+
+  new window.JustValidate('.registration-form', {
+    rules: {
+      
+    },
+    submitHandler: function(thisForm) {
+
+    }
+  })
+}
+loginForm();
+
+function registrationForm() {
+  const form = document.querySelector('.login-form');
+  const inputMask = new Inputmask('+7 (999) 999-99-99');
+
+  new window.JustValidate('.login-form', {
+    rules: {
+      
+    },
+    submitHandler: function(thisForm) {
+
+    }
+  })
+}
+registrationForm();
 
 
 

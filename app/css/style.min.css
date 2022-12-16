@@ -38,7 +38,7 @@ body {
   transition: 0.3s;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
-  background: #001B28;
+  background: #001b28;
 }
 
 h2 {
@@ -138,6 +138,20 @@ h2 {
 
 .modal--visible {
   display: block;
+}
+
+.js-validate-error-field {
+  border-color: #FF3E3E !important;
+  position: relative;
+}
+
+.js-validate-error-label {
+  display: none !important;
+}
+
+.modal--visible {
+  max-width: 500px;
+  width: 100%;
 }
 
 html {

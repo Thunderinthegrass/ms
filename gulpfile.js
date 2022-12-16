@@ -64,6 +64,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'app/js/swiper.js',
     'app/js/main.js',
+    'app/js/inputmask.min.js',
     // 'app/js/slick.min.js'
   ])
     .pipe(concat('main.min.js'))
