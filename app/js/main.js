@@ -38,6 +38,7 @@ function mobileMenu() {
   let headerNavMobile = document.querySelector(".header__nav-mobile");
   let closeMenuBtn = document.querySelector('.close-menu-btn');
   let headerNavItem = document.querySelectorAll('.header__nav-item');
+  let contactsLink = document.querySelectorAll('.contacts__link');
 
   menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
@@ -57,11 +58,11 @@ function mobileMenu() {
     document.body.classList.remove('ov-hidden');
   })
 
-
   headerNavItem.forEach((elem) => {
     elem.addEventListener('click', () => {
       headerNavMobile.classList.toggle("active");
       menuBtn.classList.toggle("active");
+      document.body.classList.remove('ov-hidden');
     })
   })
 }
