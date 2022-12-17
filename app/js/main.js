@@ -44,10 +44,19 @@ function mobileMenu() {
     headerNavMobile.classList.toggle("active");
   });
 
+  menuBtn.addEventListener('click', () => {
+    document.body.classList.add('ov-hidden');
+  })
+
   closeMenuBtn.addEventListener('click', () => {
     headerNavMobile.classList.toggle("active");
     menuBtn.classList.toggle("active");
   })
+
+  closeMenuBtn.addEventListener('click', () => {
+    document.body.classList.remove('ov-hidden');
+  })
+
 
   headerNavItem.forEach((elem) => {
     elem.addEventListener('click', () => {
@@ -145,8 +154,7 @@ function mobileMembers() {
       if (index > 7 && index < 12) {
         elem.classList.toggle('d-none');
       }
-    }) 
-    // console.log(document.documentElement.clientWidth)
+    })
   }
 }
 mobileMembers();
@@ -157,6 +165,7 @@ function tabs() {
   let tabItem = document.querySelectorAll('.map__info');
   let tabNavItem = document.querySelectorAll('.map__dot');
   let closeBtn = document.querySelectorAll('.close-info-btn');
+  let closeClass = document.querySelectorAll('.close-class');
 
   closeBtn.forEach((elem, index) => {
     elem.addEventListener('click', () => {
@@ -181,6 +190,15 @@ function tabs() {
   
   tab(tabItem, tabNavItem);
 
+  document.body.addEventListener('.click', (e) => {
+    closeClass.forEach((el) => {
+      if (e.target != el) {
+        tabItem.forEach(((elem, id) => {
+          el.classList.remove('tab--active');
+        }))
+      }
+    })
+  })
 
 }
 tabs();

@@ -327,4 +327,9 @@
       }
     }
   }
+  @media (max-width: 413px){
+    .members__inner{
+      justify-content: center;
+    }
+  }
 }

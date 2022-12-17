@@ -94,6 +94,10 @@ h2 {
   display: flex;
 }
 
+.ov-hidden {
+  overflow: hidden;
+}
+
 .modal-overlay {
   position: fixed;
   left: 0;
@@ -1851,6 +1855,44 @@ a {
     left: -26px;
   }
 }
+@media (max-width: 412px) {
+  .about.media .about__bottom-img {
+    max-width: 300px;
+    height: 280px;
+  }
+  .about.media .about__bottom-img::before {
+    max-width: 300px;
+    width: 100%;
+    height: 280px;
+  }
+  .about.media .about__bottom-img::after {
+    max-width: 300px;
+    width: 100%;
+    height: 280px;
+  }
+}
+@media (max-width: 385px) {
+  .about.media .about__bottom-img {
+    max-width: 280px !important;
+    width: 100% !important;
+    height: 265px;
+    margin-left: 25px;
+  }
+  .about.media .about__bottom-img::before {
+    max-width: 280px;
+    width: 100%;
+    height: 265px;
+    left: -25px;
+    top: 25px;
+  }
+  .about.media .about__bottom-img::after {
+    max-width: 280px;
+    width: 100%;
+    height: 265px;
+    left: -10px;
+    top: 10px;
+  }
+}
 
 .members {
   padding-top: 200px;
@@ -2173,6 +2215,13 @@ a {
   }
   .members.media .members__more-btn span::after {
     display: none;
+  }
+}
+@media (max-width: 413px) {
+  .members.media .members__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -2778,31 +2827,31 @@ a {
   }
   .footer.media .map__info-spb {
     top: 405px;
-    left: 84px;
+    left: 25px;
   }
   .footer.media .map__info-arh {
     top: 419px;
-    left: 120px;
+    left: 25px;
   }
   .footer.media .map__info-msk {
     top: 484px;
-    left: 73px;
+    left: 25px;
   }
   .footer.media .map__info-klg {
     top: 483px;
-    left: 43px;
+    left: 25px;
   }
   .footer.media .map__info-rzn {
     top: 514px;
-    left: 74px;
+    left: 25px;
   }
   .footer.media .map__info-sar {
     top: 584px;
-    left: 93px;
+    left: 25px;
   }
   .footer.media .map__info-uln {
     top: 561px;
-    left: 112px;
+    left: 25px;
   }
 }
 @media (max-width: 606px) {
@@ -3568,6 +3617,22 @@ a {
 
 }
 
+ @media (max-width: 412px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 385px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media (max-width: 1470px){
 
 @supports (-webkit-appearance:none){
@@ -3601,6 +3666,14 @@ a {
 }
 
  @media (max-width: 606px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 413px){
 
 @supports (-webkit-appearance:none){
 
