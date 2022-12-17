@@ -36,7 +36,7 @@
         transform: translateY(-50%);
         width: 15px;
         height: 15px;
-        background-image: url(../../img/footer/phone.svg);
+        background-image: url(../img/footer/phone.svg);
       }
     }
     &__mail {
@@ -54,7 +54,7 @@
         bottom: 4px;
         width: 18px;
         height: 12px;
-        background-image: url(../../img/footer/mail.svg);
+        background-image: url(../img/footer/mail.svg);
       }
     }
     &__address {
@@ -71,7 +71,7 @@
         transform: translateY(-50%);
         width: 16px;
         height: 19px;
-        background-image: url(../../img/footer/address.svg);
+        background-image: url(../img/footer/address.svg);
       }
     }
   }
@@ -217,6 +217,7 @@
     bottom: 0;
   }
   .copyright {
+    white-space: nowrap;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;

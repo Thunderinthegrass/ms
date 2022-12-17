@@ -190,16 +190,6 @@ function tabs() {
   
   tab(tabItem, tabNavItem);
 
-  document.body.addEventListener('.click', (e) => {
-    closeClass.forEach((el) => {
-      if (e.target != el) {
-        tabItem.forEach(((elem, id) => {
-          el.classList.remove('tab--active');
-        }))
-      }
-    })
-  })
-
 }
 tabs();
 

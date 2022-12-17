@@ -14,10 +14,10 @@
 <body>
   <div class="modal-overlay">
     <div class="popup modal" data-target="registration-popup">
-      <form action="" class="join-form media">
+      <form action="" class="registration-form media">
         <span class="join-form__title">Регистрация</span>
         <input type="text" class="join-form__input" placeholder="Ваше имя">
-        <input type="email" class="join-form__input" placeholder="E-mail">
+        <input type="mail" data-validate-field="email" class="join-form__input" placeholder="E-mail">
         <input type="password" class="join-form__input" placeholder="Введите пароль">
         <input type="password" class="join-form__input" placeholder="Повторите пароль">
         <button type="submit" class="join-form__btn"><span>Зарегистрироваться</span></button>
@@ -32,7 +32,7 @@
     <div class="popup modal" data-target="login-popup">
       <form action="" class="login-form media">
         <span class="login-form__title">Вход</span>
-        <input type="email" class="login-form__input" placeholder="E-mail">
+        <input type="mail" data-validate-field="email" class="login-form__input" placeholder="E-mail">
         <input type="password" class="login-form__input" placeholder="Введите пароль">
         <button type="submit" class="login-form__btn"><span>Войти</span></button>
         <div class="modal__close-btn close">
@@ -41,12 +41,16 @@
       </form>
     </div>
     <div class="popup modal" data-target="join-form-popup">
-      <form action="" class="registration-form media">
+      <form action="" class="join-form media">
         <span class="registration-form__title">Вступить в <br>ассоциацию</span>
         <input type="text" class="registration-form__input" placeholder="Наименование организации">
         <input type="text" class="registration-form__input" placeholder="ФИО">
-        <input type="tel" class="registration-form__input" placeholder="Номер телефона">
-        <input type="email" class="registration-form__input" placeholder="E-mail">
+        <div class="registration-input-wrapper">
+          <input type="tel" data-validate-field="tel" class="registration-form__input" placeholder="Номер телефона">
+        </div>
+        <div class="registration-input-wrapper">
+          <input id="email" type="mail" data-validate-field="email" class="registration-form__input" placeholder="E-mail">
+        </div>
         <button type="submit" class="registration-form__btn"><span>Отправить заявку</span></button>
         <div class="modal__close-btn close">
           <img class="close" src="img/svg/form/close.svg" alt="">
@@ -79,6 +83,12 @@
             <li class="header__nav-item"><a href="#footer" class="header__nav-link">Контакты</a></li>
             <li class="header__nav-item"><a href="news.html" class="header__nav-link">Новости</a></li>
           </ul>
+          <div class="header__contacts contacts">
+            <a href="tel:+74953683765" class="contacts__phone">+7 (495) 368-37-65</a>
+            <a href="mailto:info@morinsysmarp.ru" class="contacts__mail">info@morinsysmarp.ru</a>
+            <p class="contacts__address">Россия, Москва, ул. Электродная, 3а</p>
+          </div>
+          <span class="copyright">© 2019 morinsysmarp.ru</span>
         </nav>
         <div class="login-block">
           <a href="profile.html" class="user-link">
@@ -94,7 +104,7 @@
             <button class="registration-btn modal-btn" data-path="registration-popup">Регистрация</button>
             <button class="login-btn modal-btn" data-path="login-popup">Вход</button>
           </div>
-          <button class="login-btn_mobile modal-btn" data-path="login-popup">
+          <button class="login-btn_mobile modal-btn d-none" data-path="login-popup">
   
           </button>
         </div>
@@ -359,6 +369,8 @@
     </div>
     <span class="copyright">© 2019 morinsysmarp.ru</span>
   </footer>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
